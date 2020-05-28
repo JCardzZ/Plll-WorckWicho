@@ -140,17 +140,18 @@ CREATE TABLE `usuarios` (
   `username` varchar(45) NOT NULL,
   `password` varchar(100) NOT NULL,
   `estatus` int(11) NOT NULL DEFAULT 1,
-  `fechaRegistro` date DEFAULT NULL
+  `fechaRegistro` date DEFAULT NULL,
+  `recidencia` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `username`, `password`, `estatus`, `fechaRegistro`) VALUES
-(9, 'Administrador', 'admin@gmail.com', 'admin', '$2a$10$Dt6z2Xn1KXciVJBuAh5WZOIuAH4PbtXlJyViCuJ/lWby13YHFEL1y', 1, '2020-05-08'),
-(10, 'Usuario', 'usuario@gmail.com', 'usuario', '$2a$10$GPGTslH/Fq4bSdRI/t76SuzhbnjXlC/2UQS5RtHkku.kOGJJk.GgW', 1, '2020-05-08'),
-(11, 'Supervisor', 'supervisor@gmail.com', 'supervisor', '$2a$10$42B4asbkqJfgSOX50WJJbezH4LvYbcV.Rq91ev9p5iA05taLoFvvG', 1, '2020-05-08');
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `username`, `password`, `estatus`, `fechaRegistro`, `recidencia`) VALUES
+(9, 'Administrador', 'admin@gmail.com', 'admin', '$2a$10$Dt6z2Xn1KXciVJBuAh5WZOIuAH4PbtXlJyViCuJ/lWby13YHFEL1y', 1, '2020-05-08', 'San salvador'),
+(10, 'Usuario', 'usuario@gmail.com', 'usuario', '$2a$10$GPGTslH/Fq4bSdRI/t76SuzhbnjXlC/2UQS5RtHkku.kOGJJk.GgW', 1, '2020-05-08', 'San salvador'),
+(11, 'Supervisor', 'supervisor@gmail.com', 'supervisor', '$2a$10$42B4asbkqJfgSOX50WJJbezH4LvYbcV.Rq91ev9p5iA05taLoFvvG', 1, '2020-05-08', 'San salvador');
 
 -- --------------------------------------------------------
 
@@ -163,6 +164,7 @@ CREATE TABLE `vacantes` (
   `nombre` varchar(200) NOT NULL,
   `descripcion` text NOT NULL,
   `fecha` date NOT NULL,
+  `direccion` varchar(200) NOT NULL,
   `salario` double NOT NULL,
   `estatus` enum('Creada','Aprobada','Eliminada') NOT NULL,
   `destacado` int(11) NOT NULL,
@@ -175,9 +177,9 @@ CREATE TABLE `vacantes` (
 -- Volcado de datos para la tabla `vacantes`
 --
 
-INSERT INTO `vacantes` (`id`, `nombre`, `descripcion`, `fecha`, `salario`, `estatus`, `destacado`, `imagen`, `detalles`, `idCategoria`) VALUES
-(14, 'Programador ', 'Empresa Salvadoreña requiere Ing. de Sistemas con experiencia en desarrollo.', '2020-03-10', 20000, 'Aprobada', 1, 'MH00LSFICaptura-de-pantalla-(252).png', '<p><span style=\"color: #ff0000;\"><strong>Educaci&oacute;n:</strong></span></p>\r\n<ul>\r\n<li>Ing. en Sistemas, de preferencia con estudios de Maestria en Java EE.</li>\r\n<li>Ingles</li>\r\n</ul>\r\n<p><span style=\"color: #ff0000;\"><strong>Requisitos:</strong></span></p>\r\n<ol>\r\n<li>Experiencia en Sistemas Descentralizados.</li>\r\n</ol>\r\n<p><span style=\"color: #0000ff;\"><em><strong>Si cumples con los requisitos mencionares, por favor env&iacute;anos tu CV en formato PDF.</strong></em></span></p>', 4),
-(15, 'Medico', 'Medico en general', '2020-05-08', 3500, 'Aprobada', 1, 'JY8N154HCaptura-de-pantalla-(260).png', '<p>Medico en medicina en general</p>', 17);
+INSERT INTO `vacantes` (`id`, `nombre`, `descripcion`, `fecha`, `direccion`, `salario`, `estatus`, `destacado`, `imagen`, `detalles`, `idCategoria`) VALUES
+(14, 'Programador ', 'Empresa Salvadoreña requiere Ing. de Sistemas con experiencia en desarrollo.', '2020-03-10', 'San salvador', 20000, 'Aprobada', 1, 'MH00LSFICaptura-de-pantalla-(252).png', '<p><span style=\"color: #ff0000;\"><strong>Educaci&oacute;n:</strong></span></p>\r\n<ul>\r\n<li>Ing. en Sistemas, de preferencia con estudios de Maestria en Java EE.</li>\r\n<li>Ingles</li>\r\n</ul>\r\n<p><span style=\"color: #ff0000;\"><strong>Requisitos:</strong></span></p>\r\n<ol>\r\n<li>Experiencia en Sistemas Descentralizados.</li>\r\n</ol>\r\n<p><span style=\"color: #0000ff;\"><em><strong>Si cumples con los requisitos mencionares, por favor env&iacute;anos tu CV en formato PDF.</strong></em></span></p>', 4),
+(15, 'Medico', 'Medico en general', '2020-05-08', 'San salvador', 3500, 'Aprobada', 1, 'JY8N154HCaptura-de-pantalla-(260).png', '<p>Medico en medicina en general</p>', 17);
 
 --
 -- Índices para tablas volcadas
