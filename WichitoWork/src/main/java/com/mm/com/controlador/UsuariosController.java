@@ -64,7 +64,7 @@ public class UsuariosController {
 		return "redirect:/usuarios/index";
 	}
 	/**
-	 *Fin de instruccion
+	 *Fin del metodo instruccion
 	 */
 	
 	
