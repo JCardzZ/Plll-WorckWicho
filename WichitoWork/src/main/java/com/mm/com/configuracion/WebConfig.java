@@ -26,5 +26,5 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addResourceHandler("/cv/**").addResourceLocations("file:"+rutaCv); // Linux
 		
 	}
-	//WWWWWWWWWWWWWWWWWWWWWWWWWWWW tESTS
+	//Cambio 1
 }

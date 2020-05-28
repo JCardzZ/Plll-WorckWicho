@@ -29,7 +29,7 @@ public class Utileria {
 			return null;
 		}
 	}
-
+//Cambio 2
 	/**
 	 * Metodo para generar una cadena aleatoria de longitud N... METODO ALEATORIO-RANDOM-Para generar caracteres aleatorios para evitar archivos duplicados
 	 */
