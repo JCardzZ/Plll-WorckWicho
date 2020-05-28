@@ -55,7 +55,7 @@ public class UsuariosController {
 	}
     
 	/**
-	 * Método para bloquear un usuario
+	 * Método para bloquear un usuario con security
 	 */
 	@GetMapping("/lock/{id}")
 	public String bloquear(@PathVariable("id") int idUsuario, RedirectAttributes attributes) {		
@@ -63,5 +63,9 @@ public class UsuariosController {
 		attributes.addFlashAttribute("msg", "El usuario fue bloqueado y no tendra acceso al sistema.");		
 		return "redirect:/usuarios/index";
 	}
+	/**
+	 *Fin del metodo instruccion
+	 */
+	
 	
 }
