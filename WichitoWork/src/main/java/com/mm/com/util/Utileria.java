@@ -33,6 +33,7 @@ public class Utileria {
 	/**
 	 * Metodo para generar una cadena aleatoria de longitud N... METODO ALEATORIO-RANDOM-Para generar caracteres aleatorios para evitar archivos duplicados
 	 */
+	//Cambio 3
 	public static String randomAlphaNumeric(int count) {
 		String CARACTERES = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		StringBuilder builder = new StringBuilder();
